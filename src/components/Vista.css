@@ -1,0 +1,28 @@
+.img-producto{
+    border-radius: 4px;
+    
+    border: 1px solid black;
+  }
+
+  .btn-atras{
+    background-color: white;
+    border-color: black;
+    color: black;
+    margin-top: 10px;
+    
+  }
+
+  .btn-atras:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .datos{
+      text-align: left;
+  }
+
+  .card-title{
+      text-align: left;
+      margin-left: 20px;
+      margin-top: 20px;
+  }

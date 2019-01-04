@@ -1,0 +1,52 @@
+.imagen{
+    height: 200px;
+    
+}
+
+
+.Spinner-Control {
+    width: 20px;
+  }
+  
+  .Spinner-Value-Container{ 
+    position:relative;
+    display: table; 
+    overflow: hidden;
+    height:80%;
+    background-color: white; 
+    width:80%; 
+    float:left;
+    font-size: 16px;
+    vertical-align: middle; 
+    text-align: center;
+  }
+  
+  .Spinner-Value {
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: left;
+  }
+  
+  .Spinner-UpDown{
+    position:relative;
+    height:16px;
+    background-color:gray; 
+    width:20%; 
+    float:right;    
+  }
+  
+  .Spinner-Button-Container {
+    display: table; 
+    height: 50%; 
+    width: 100%; 
+    overflow: hidden; 
+    
+    background-color:white;
+  }
+  
+  .Spinner-Button {
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center; 
+    font-size: 6px;
+  }
