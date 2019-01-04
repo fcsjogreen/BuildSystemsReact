@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 //import { compra } from '../compra.json';
 import { Link } from "react-router-dom";
+import { Subscribe } from 'unstated';
+import CounterContainer from '../container/ProductCounterContainer';
 import './Compra.css';
 
 import firebase from '../Firebase';
@@ -126,10 +128,18 @@ class Compra extends Component {
 
                             <h1 className="text-dark">Total: {this.state.valor} </h1>
                             <Link to='/buscar'>
-                                <button type="button" className="btn btn-primary btn-cancelar">Cancelar</button>
+                                <button type="button" className="btn btn-primary btn-cancelar">Cancelar</button>                            
                             </Link>
                             <Link to='/buscar'>
-                                <button onClick={this.handlePagar} type="button" className="btn btn-primary btn-pagar">Pagar</button>
+                            <Subscribe to={[CounterContainer]}>
+                                {
+                                     counterContainer =>{
+                                         return(<button onClick={(e)=>{this.handlePagar(); counterContainer.cero();}} type="button" className="btn btn-primary btn-pagar">Pagar</button>)
+                                     }
+                                }
+                                
+                            </Subscribe>
+                                
                             </Link>
                         </div>
                     </div>

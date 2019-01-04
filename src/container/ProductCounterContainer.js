@@ -12,6 +12,10 @@ class CounterContainer extends Container {
   decrement = () => {
     this.setState({ count: this.state.count - 1 })
   }
+
+  ceri = () =>{
+    this.setState({count: 0})
+  }
 }
 
 export default CounterContainer
