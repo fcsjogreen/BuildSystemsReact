@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Route, Switch } from 'react-router-dom';
-import {Provider} from 'unstated';
+
 
 import Buscar from './components/Buscar';
 import Inicio from './components/Inicio';
@@ -28,12 +28,12 @@ class App extends Component {
     )
 
     return (
-      <Provider>
+      
       <Switch>
         <Route exact path="/" component={LoginContainer} />
         <Route component={DefaultContainer} />
       </Switch>
-      </Provider>
+      
     )
   }
 }

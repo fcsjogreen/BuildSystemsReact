@@ -1,8 +1,14 @@
 import { Container } from 'unstated'
 
+
 class CounterContainer extends Container {
   state = {
     count: 0
+  }
+
+  
+  setCount =(num) =>{
+    this.setState({count: num}) 
   }
 
   increment = () => {
@@ -13,7 +19,7 @@ class CounterContainer extends Container {
     this.setState({ count: this.state.count - 1 })
   }
 
-  ceri = () =>{
+  cero = () =>{
     this.setState({count: 0})
   }
 }

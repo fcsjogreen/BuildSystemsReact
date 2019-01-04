@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Subscribe } from 'unstated';
 import CounterContainer from '../container/ProductCounterContainer';
 //import { compra } from '../compra.json';
-
 import firebase from '../Firebase';
 
 class Navbar extends Component {
@@ -12,9 +11,9 @@ class Navbar extends Component {
         super(props);
         this.ref = firebase.firestore().collection('compra')
         this.state ={
-            numero: 0,
-            compra: []
+            numero: 0
         }
+      
         this.gotoCompras = this.gotoCompras.bind(this);
     }
 
@@ -39,15 +38,16 @@ class Navbar extends Component {
                         numero,
                         subtotal
                     });
-                });
-                this.setState({ compra });
-                num = this.state.compra.length-1;
+                });                
+                num = compra.length-1;
                 this.setState({numero: num})
             }          
         });        
     }
     
     
+
+   
 
     render() {        
         return (
@@ -68,6 +68,7 @@ class Navbar extends Component {
                                         <Subscribe to={[CounterContainer]}>
                                             {
                                                 counterContainer =>{
+                                                    console.log(counterContainer.state.count)
                                                     if(counterContainer.state.count===0){
                                                         return(<span className="badge badge-pill badge-danger"></span>)
                                                     }else{
